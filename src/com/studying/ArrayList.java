@@ -7,13 +7,15 @@ public class ArrayList <T> {
     public int size;
     public int counter;
     public int initSize = 100;
-    public ArrayList(){
+
+    public ArrayList() {
         items = (T[]) new Object[initSize];
-        nextFirst = initSize/2;
-        nextLast = (initSize/2) +1;
+        nextFirst = initSize / 2;
+        nextLast = (initSize / 2) + 1;
         size = 0;
     }
-    public void addLast(T item){
+
+    public void addLast(T item) {
         items[nextLast + 1] = item;
         nextLast = nextLast + 1;
     }
