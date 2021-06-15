@@ -15,7 +15,9 @@ public class ArrayList <T> {
         size = 0;
     }
 
+
     public void addLast(T item) {
+
         items[nextLast + 1] = item;
         nextLast = nextLast + 1;
     }
