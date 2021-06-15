@@ -13,5 +13,14 @@ public class ArrayList <T> {
         nextLast = (initSize/2) +1;
         size = 0;
     }
-    public void addLast
+    public void addLast(T item){
+        if (nextLast == items.length - 1) {
+            resize();
+        }
+        items[nextLast + 1] = item;
+        nextLast ++;
+    }
+    public void addFirst(T item){
+
+    }
 }
