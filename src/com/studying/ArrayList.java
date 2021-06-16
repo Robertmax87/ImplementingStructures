@@ -13,14 +13,44 @@ public class ArrayList <T> {
         nextLast = (initSize/2) +1;
         size = 0;
     }
-    public void addLast(T item){
+    public void addLast(T item) {
         if (nextLast == items.length - 1) {
-            resize();
+            resize(item);
+        } else {
+            items[nextLast + 1] = item;
+            nextLast++;
+            size++;
         }
-        items[nextLast + 1] = item;
-        nextLast ++;
     }
-    public void addFirst(T item){
 
+    private void resize(T item) {
+    }
+
+    public void addFirst(T item){
+        if (nextFirst == items.length + 1){
+            resize(item);
+        } else {
+            items[nextFirst - 1] = item;
+            nextLast--;
+            size++;
+        }
+    }
+    public T returnItem(T item){
+        if (items == null){
+            throw new ArrayIndexOutOfBoundsException("The Array is NULL, add items to the Array");
+        }
+        counter = nextFirst-1;
+        if (items[counter] == null){
+            counter = counter + 1;
+        }
+        int start = 0;
+        while ( start <= items.length){
+            start+=1;
+
+        }
+        return null;
+    }
+    public int size(){
+        return size;
     }
 }
