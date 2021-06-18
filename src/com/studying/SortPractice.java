@@ -3,7 +3,7 @@ import java.lang.reflect.Array;
 import java.util.Arrays;
 public class SortPractice {
     public static void main(String[] args) {
-        int[] array = {0, 1, 2, 3, 45, 65, 323, 536, 4, 32, 64, 563, 6563, 45, 245, 245};
+        int[] array = {1234,34,34,5,426,3431,7,7,647,36,234};
         for(int last = array.length-1; last < 0; last-- ){
             for( int i = 0; i < last; i ++){
                 if (array[i] > array[i + 1]){
