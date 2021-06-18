@@ -21,7 +21,7 @@ public class SortPractice {
         }
         int holder = a[x];
         a[x] = a[y];
-        a[y] = holder;
+        a[y] = a[x];
 
     }
 
